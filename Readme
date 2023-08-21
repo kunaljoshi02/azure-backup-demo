@@ -1,0 +1,7 @@
+This repository contains Bicep templatest to deploy the infrastructure required to demo the functionality of Azure Backup service. Through these scripts, the following resources get deployed:
+1. Azure VNET
+  1a. A Default Subnet
+  1b. A Bastion Subnet
+2. A Recovery Services Vault with a default policy
+3. A Windows 2016 Datacenter VM deployed to Default Subnet
+

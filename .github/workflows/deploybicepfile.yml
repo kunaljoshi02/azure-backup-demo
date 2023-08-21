@@ -14,16 +14,16 @@ jobs:
       # Log into Azure
     - uses: azure/login@v1
       with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        client-id: "08c8e939-d43d-4e15-b61e-a6ec4a1a3c43"
+        tenant-id: "16b3c013-d300-468d-ac64-7eda0820b6d3"
+        subscription-id: "93dab153-f48b-4313-b1dc-fb834325ad6e"
 
       # Deploy Bicep file
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
-        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-        resourceGroupName: ${{ secrets.AZURE_RG }}
+        subscriptionId: "93dab153-f48b-4313-b1dc-fb834325ad6e"
+        resourceGroupName: "azbkdemo-rg"
         template: ./main.bicep
         parameters: 'storagePrefix=mystore storageSKU=Standard_LRS'
         failOnStdErr: false
